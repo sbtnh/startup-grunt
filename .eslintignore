@@ -1,0 +1,10 @@
+# Pour plus d'info sur ce fichier: http://eslint.org/docs/user-guide/configuring#ignoring-files-and-directories
+
+
+# ignore tout sauf le dossier js
+
+
+
+# ignore les vendors
+source/js/browserify/vendors/*
+!source/js/*

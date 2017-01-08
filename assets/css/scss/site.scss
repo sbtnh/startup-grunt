@@ -1,0 +1,44 @@
+// *************************************
+// sebhiticas
+// based on http://sass-guidelin.es/fr/#architecture
+// *************************************
+
+// *************************************
+// Reset
+// *************************************
+@import 'base/normalize';
+
+// *************************************
+// Utils
+// *************************************
+@import 'utils/variables';
+@import 'vendors/bourbon-neat/neat';
+@import 'utils/mixins';
+@import 'utils/helpers';
+
+// *************************************
+// Base
+// *************************************
+@import 'base/base';
+@import 'base/typography';
+
+// *************************************
+// Layout
+// *************************************
+@import 'layout/grid';
+@import 'layout/layout';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/nav';
+
+// *************************************
+// Components
+// *************************************
+@import 'components/buttons';
+@import 'components/icons';
+@import 'components/forms';
+
+
+// *************************************
+// Views
+// *************************************

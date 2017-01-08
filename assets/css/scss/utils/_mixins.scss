@@ -1,0 +1,20 @@
+@mixin clearfix {
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+
+    content: '\0020';
+
+    &:before,
+    &:after {
+        display: table;
+
+        height: 0;
+
+        content: '';
+    }
+
+    &:after {
+        clear: both;
+    }
+}

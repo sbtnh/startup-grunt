@@ -1,0 +1,88 @@
+// Variables
+//
+// Define all variables in this file
+
+// *************************************
+// Table of Contents
+//
+// Images
+// Grid margins
+// Screen breakpoints
+// Media queries
+// Grids variables
+// Social colors
+// *************************************
+
+// *************************************
+// Image
+// *************************************
+$image-path: '/static/dist/images';
+
+// *************************************
+// Grid margins
+// 
+// Grid margins for all breakpoints
+// *************************************
+$grid-margin-xs: 0.5rem;
+$grid-margin-sm: 0.5rem;
+$grid-margin-md: 1rem;
+$grid-margin-lg: 1rem;
+
+// *************************************
+// Screen breakpoints
+// *************************************
+$screen-sm-min: 640px;
+$screen-md-min: 1024px;
+$screen-lg-min: 1440px;
+$screen-xl-min: 1920px;
+
+// *************************************
+// Media queries
+// *************************************
+$xs: max-width $screen-sm-min - 1;
+$sm-min: min-width $screen-sm-min;
+$sm-max: max-width $screen-md-min - 1;
+$sm: min-width $screen-sm-min max-width $screen-md-min - 1;
+$md-min: min-width $screen-md-min;
+$md-max: max-width $screen-lg-min - 1;
+$md: min-width $screen-md-min max-width $screen-lg-min - 1;
+$lg-min: min-width $screen-lg-min;
+$lg-max: max-width $screen-xl-min - 1;
+$lg: min-width $screen-lg-min max-width $screen-xl-min - 1;
+$xlg-min: min-width $screen-xl-min;
+$xlg: $xlg-min;
+
+// *************************************
+// Grids variables
+// *************************************
+$grid-columns: 12;
+$column: 70px;
+$gutter: 30px;
+$max-width: $screen-lg-min;
+
+// *************************************
+// Social colors
+// The following colors are only to be used when referencing the associated social network.
+// usage : map-get($social-colors, 'instagram');
+// *************************************
+$social-colors: (
+    'facebook'  : #3b5998,
+    'twitter'   : #55acee,
+    'google'    : #dd4b39,
+    'linkedin'  : #0077b5,
+    'pinterest' : #bd081c,
+    'tumblr'    : #36465d,
+    'youtube'   : #cd201f,
+    'instagram' : #517fa4
+);
+
+// *************************************
+// Site colors
+// *************************************
+$color-1: #000;
+$color-2: #fff;
+
+// *************************************
+// Font
+// *************************************
+$font: Arial;

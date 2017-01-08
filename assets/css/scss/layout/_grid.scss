@@ -1,0 +1,93 @@
+// *************************************
+// The Grid
+// *************************************
+[am-grid-container] {
+    position: relative;
+
+    overflow: inherit !important;
+
+    margin-bottom: 20px;
+    padding: 0 10px;
+
+    @include clearfix;
+    @include outer-container();
+    @include media($sm-min) {
+        padding: 0 20px;
+    }
+}
+
+/* Generate the grid */
+$breakpoints: (sm:$sm, sm-min:$sm-min, md:$md, lg:$lg-min);
+
+@each $media, $break in $breakpoints {
+    @for $i from 1 through $grid-columns {
+        @include media($break) {
+            [am-grid-col~='#{$media}-#{$i}'] {
+                @include span-columns($i);
+            }
+
+            [am-grid-col~='#{$media}-half'] {
+                position: relative;
+
+                float: left;
+
+                width: 50%;
+            }
+
+            [am-shift~='#{$media}-#{$i}'] {
+                @include shift($i);
+            }
+
+            [am-omega~='#{$media}'] {
+                @include media($sm) {
+                    @include omega();
+                }
+            }
+        }
+
+        [am-omega~='#{$i}n'] {
+            > div,
+            span {
+                @include omega(#{$i}n);
+            }
+        }
+    }
+}
+
+[am-grid-col~='one-third'] {
+    clear: both;
+
+    width: 100%;
+    //@include media($xs) {
+    //    width: 100%;
+    //    clear: both;
+    //}
+
+    @include media($sm-min) {
+        clear: none;
+    }
+    @include media($sm) {
+        @include span-columns(1 of 2);
+        @include omega(2n);
+    }
+    @include media($md-min) {
+        @include span-columns(1 of 3);
+        @include omega(3n);
+    }
+}
+
+[am-grid-col~='half'] {
+    position: relative;
+    //width: 100%;
+
+    width: 100%;
+    //@include media($xs) {
+    //    width: 100%;
+    //}
+
+    @include media($sm-min) {
+        float: left;
+
+        width: 50%;
+    }
+}

@@ -1,0 +1,23 @@
+default:
+    description: 'Default (dev) build'
+    tasks:
+    - dev
+dev:
+    tasks:
+    - 'buildCss'
+    - 'buildJs'
+    - 'watch'
+prod:
+    tasks:
+    - 'kraken'
+    - 'csscomb'
+    - 'buildCss'
+    - 'buildJs'
+buildCss:
+    tasks:
+    - 'sass'
+    - 'postcss'
+buildJs:
+    tasks:
+    - 'jshint'
+    - 'browserify'
